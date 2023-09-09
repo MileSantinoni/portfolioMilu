@@ -56,23 +56,27 @@ header {
 
 .hero {
     width: 100vw;
-    margin-top: 5em;
+    height: 100vh;
+    margin-top: -1em;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 30vw);
     align-items: center;
     gap: 2rem;
 }
 
 .hero-img img {
     max-width: 50em;
-    height: auto;
+    max-height: 100%;
 }
 
 aside {
     padding: 0 19%;
 }
 
+.hero-text{
+    max-height: 60vh;
+}
 .hero-text h5 {
     margin-bottom: .2em;
     font-size: 3em;
