@@ -60,13 +60,13 @@ header {
     margin-top: -1em;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 30vw);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
 }
 
 .hero-img img {
-    max-width: 50em;
+    max-width: 30vw;
     max-height: 100%;
 }
 
