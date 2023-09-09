@@ -71,7 +71,7 @@ header {
     height: auto;
 }
 
-section {
+aside {
     padding: 0 19%;
 }
 
@@ -322,7 +322,7 @@ section {
 }
 
 @media (max-width: 1460px) {
-    section {
+    aside {
         padding: 0 12;
         transition: .2s;
     }
@@ -344,7 +344,7 @@ section {
 }
 
 @media (max-width: 1195px) {
-    section {
+    aside {
         padding: 0 3%;
         transition: .2s;
     }
