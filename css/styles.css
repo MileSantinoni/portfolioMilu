@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+
 
 
 * {
@@ -11,9 +13,9 @@
 }
 
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
     background: linear-gradient(245.59deg, #e74d74 0%, #b83891 20.53%, #470938 75.52%);
-    
+
 }
 
 
@@ -32,19 +34,37 @@ body {
 
 header {
     position: fixed;
-    right: 0;
     top: 0;
+    right: 0;
     z-index: 1000;
-    width: 100%;
+    width: 100vw;
+    height: 6em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 33px 9%;
+    padding: 1.5em 9%;
     background: transparent;
+    scroll-behavior: smooth;
+    transition: top 1.5s;
 }
 
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+
+
+}
+
+.nav ul a {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/*Sección inicio*/
 .logo img {
-    width: 5em;
+    width: 3.8em;
 }
 
 .navlist {
@@ -79,9 +99,10 @@ aside {
     padding: 0 19%;
 }
 
-.hero-text{
+.hero-text {
     max-height: 60vh;
 }
+
 .hero-text h5 {
     margin-bottom: .2em;
     font-size: 3em;
@@ -111,9 +132,10 @@ aside {
 .hero-text a {
     display: inline-block;
     color: white;
-    background: #e74d74;
-    border: 1px solid transparent;
-    padding: 12px 30px;
+    background: transparent;
+    border: 1px solid white;
+    padding: 1em;
+    margin: .5em;
     line-height: 1.4;
     font-size: 14px;
     font-weight: 500;
@@ -123,20 +145,10 @@ aside {
 }
 
 .hero-text a:hover {
-    background: transparent;
+    background: #e74d74;
+
     border: 1px solid white;
     transform: translate(8px);
-}
-
-.hero-text a.ctaa {
-    background: transparent;
-    border: 1px solid white;
-    margin-left: 20px;
-}
-
-.hero-text a.ctaa i {
-    vertical-align: middle;
-    margin-right: 5px;
 }
 
 .icons {
@@ -180,54 +192,59 @@ aside {
     transform: translateY(-5px);
 }
 
+/* Sección de tecnologías*/
 
 #tecnos {
     display: grid;
-    place-items: center; /* Esto centrará el contenido horizontal y verticalmente */
+    place-items: center;
+    /* Esto centrará el contenido horizontal y verticalmente */
     width: 100vw;
     height: 100vh;
-    
-  }
-  
-  .img-tecnos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas, una para cada imagen y texto */
-    gap: 6em; /* Espacio entre elementos */
-    text-align: center; /* Centrar el texto horizontalmente */
-    
-  }
 
-  .img-tecnos img:hover {
+}
+
+.img-tecnos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Cuatro columnas, una para cada imagen y texto */
+    gap: 6em;
+    /* Espacio entre elementos */
+    text-align: center;
+    /* Centrar el texto horizontalmente */
+
+}
+
+.img-tecnos img:hover {
     transform: translateY(-30px);
     scale: 1.1;
 }
-  
-  .img-container {
+
+.img-container {
     width: auto;
-    
-  }
-  
-  .img-container img {
-   
-    max-width: 10vw; /* Tamaño máximo de las imágenes */
-    margin: 0 auto; /* Centrar la imagen horizontalmente */
+
+}
+
+.img-container img {
+
+    max-width: 10vw;
+    margin: 0 auto;
     transition: all .55s ease;
-    
-  }
-  
-  .img-tecnos h6 {
+
+}
+
+.img-tecnos h6 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw; /* Tamaño de fuente ajustable */
+    font-size: 1.5vw;
     color: #be8eb2;
-  }
-  
+}
+
 
 .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top:-30vh ;
+    margin-top: -30vh;
 }
 
 .barra {
@@ -262,17 +279,18 @@ aside {
     }
 }
 
+
+/* Sección de proyectos*/
+
 .proyectos {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(180deg, transparent , #470938 40.52%, #000000);
-    display: flex;
-    place-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, transparent, #470938 40.52%, #000000);
     flex-wrap: wrap;
-  
+    place-content: center;
+
 }
 
 .card {
@@ -282,10 +300,10 @@ aside {
     position: relative;
     width: 45vh;
     height: 50vh;
-    
-  }
-  
-  .card .face {
+
+}
+
+.card .face {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -293,21 +311,21 @@ aside {
     border-radius: 10px;
     overflow: hidden;
     transition: .8s;
-  }
-  
-  .card .front {
+}
+
+.card .front {
     transform: perspective(600px) rotateY(0deg);
-  }
-  
-  .card .front img {
+}
+
+.card .front img {
     margin: 0 auto;
     display: flex;
     width: 70%;
     height: 60%;
     object-fit: center;
-  }
-  
-  .card .front h3 {
+}
+
+.card .front h3 {
     font-family: 'Julius Sans One', sans-serif;
     position: absolute;
     bottom: 0;
@@ -317,41 +335,185 @@ aside {
     color: #fff;
     background: rgba(0, 0, 0, .4);
     text-align: center;
-  }
-  .card .back {
+}
+
+.card .back {
     transform: perspective(600px) rotateY(180deg);
-    background: linear-gradient(180deg, transparent , #470938 40.52%, #000000);
+    background: linear-gradient(180deg, transparent, #470938 40.52%, #000000);
     color: #f3f3f3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 5%;
-  }
+}
 
-
-  
-  .card .back h2 {
+.card .back h2 {
     position: relative;
     font-family: 'Julius Sans One', sans-serif;
     font-size: 300%;
     padding-bottom: 10%;
     margin-top: 10%;
-  
-  }
-  
-  .card .back a {
+
+}
+
+.card .back a {
     color: #470938;
     margin: 0 auto;
     font-size: 2em;
-    font-weight:bold ;
-  }
+    font-weight: bold;
+}
 
-  .card:hover .front {
+.card:hover .front {
     transform: perspective(600px) rotateY(180deg);
-  }
-  
-  .card:hover .back {
+}
+
+.card:hover .back {
     transform: perspective(600px) rotateY(360deg);
     scale: 110%;
-  }
+}
+
+/* Parte del form de contacto*/
+/*estilos del formulario con flex*/
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+
+}
+
+.flex-container {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 4.5%;
+    margin: 0 auto;
+}
+
+.flex-container h3 {
+
+    font-size: 7em;
+    color: #b43857;
+    text-align: center;
+    font-family: 'Bahiana', cursive;
+
+}
+
+.form {
+    min-width: 400px;
+    flex: 1;
+    text-align: center;
+    padding: 1em;
+    margin-top: 8%;
+    order: 5;
+
+}
+
+.form__input {
+    width: 100%;
+    padding: 7px;
+    margin: 6px 0;
+    border: none;
+    border: 1px solid rgb(231, 111, 151);
+    background-color: transparent;
+}
+
+.form__input:focus {
+    background-color: rgba(221, 138, 138, 0.322);
+    outline: none;
+}
+
+.form textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+.form input[type="submit"] {
+    background-color: #b43857;
+    color: white;
+    border: none;
+}
+
+.form input[type="submit"]:hover {
+    background-color: rgb(197, 107, 107);
+    color: white;
+    border: none;
+}
+
+::placeholder {
+    color: rgb(214, 127, 127);
+}
+
+#error {
+    color: #e60000;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    place-content: center;
+}
+
+/*fin de estilos del formulario con flex*/
+
+.footer {
+    display: flex;
+    width: 100vw;
+    height: 3vh;
+    background-color: #b43857;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-height:669px) and (max-width: 377px) {
+
+   *{
+    box-sizing: content-box;
+   }
+    body{
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .hero {
+        min-height: 100vh;
+        min-width: 100vw;
+        top: 9em;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+    }
+
+    .hero .hero-img {
+        padding: 150px;
+        display: block;
+    }
+
+    .icons {
+        padding: 15px;
+        width: 100vw;
+        place-content: center;
+        position: absolute;
+        display: flex;
+        gap: 5px;
+
+    }
+
+    #tecnos{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+}

@@ -4,26 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-       
     <link rel="shortcut icon" href="./img/Yuumi.icono.png" />
 
-    <title>Milen Santinoni</title>
+    <title>Milena Santinoni</title>
 </head>
 
 <body>
     <header>
         <a href="#hero" class="logo"><img src="img/Yuumi.icono.png" alt=""></a>
+        <span><div class="nav">
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#tecnos">Tecnologías</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div></span>
     </header>
 
 
-    <!--redes sociales y presentación-->
+<!-- redes -->
 
     <div class="icons">
         <a href="https://www.instagram.com/mile.santinoni/" target="_blank"><i class="ri-instagram-line"></i></a>
@@ -33,7 +41,7 @@
         <a href="mailto:santinonimilena@gmail.com"><i class="ri-mail-line"></i></a>
     </div>
 
-
+<!-- Inicio y presentación -->
     <aside class="hero" id="hero"> 
         <div class="hero-text">
             <h5></h5>
@@ -45,7 +53,7 @@
                 (debo admitir que me encanta el desarrollo front-end) <br>
             </p>
             <a href="#tecnos">Tecnos</a>
-            <a href="#proyectos" class="ctaa"><i class="ri-play-fill">Proyectos</i></a>
+            <a href="#proyectos">Proyectos</a>
         </div>
         <div class="hero-img">
             <img src="./img/Yuumi Splash.png" alt="">
@@ -123,7 +131,42 @@
           <a href="https://pajarito.netlify.app/" target="_blank">Visitar</a>
         </div>
       </div>
-    <section> 
+    </section> 
+      
+
+<!--Formulario de contacto-->
+
+<section class="contacto" id="contacto">
+<div class="flex-container">
+    <h3>Contacto</h3>
+    <form class="form" action="https://formsubmit.co/santinonimilena@gmail.com" method="POST" onsubmit="return validarFormulario();">
+        <div class="form__section">
+            <input type="email" class="form__input" placeholder="Email" id="email" name="email">
+        </div>
+        <div class="form__section">
+            <input type="text" class="form__input" placeholder="Asunto" id="asunto" name="asunto">
+        </div>
+        <div class="form__section">
+            <textarea class="form__input" placeholder="Mensaje" name="mensaje"></textarea>
+        </div>
+        <div class="form__section">
+            <input type="submit" method="POST" class="form__input" >
+        </div><div id="error"></div>
+        
+    </form>
+    
+</section>
+
+
+<section class="footer">
+ <p>Web desarrollada con <span>❤️</span> por Milu</p>
+</section>
+
+
+
+
+
+
     
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/main.js"></script>
