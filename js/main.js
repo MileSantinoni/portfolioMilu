@@ -1,6 +1,6 @@
-// let menu = document.querySelector('#menu-icon');
-// let navlist = document.querySelector('.navlist');
-// let nombre = prompt("¿Cómo te llamas?");
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
+let nombre = prompt("¿Cómo te llamas?");
 
 //para el header
  let ubicacionPrincipal = window.pageYOffset;
@@ -14,8 +14,8 @@
     ubicacionPrincipal = Desplazamiento_Actual;
  }
 
-// const h5 = document.querySelector('h5');
-//  h5.innerHTML = "¡Hola"+" "+ nombre + "!";
+const h5 = document.querySelector('h5');
+ h5.innerHTML = "¡Hola"+" "+ nombre + "!";
 
 
 

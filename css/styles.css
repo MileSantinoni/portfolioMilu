@@ -15,7 +15,7 @@
 body {
     overflow-x: hidden;
     background: linear-gradient(245.59deg, #e74d74 0%, #b83891 20.53%, #470938 75.52%);
-
+    
 }
 
 
@@ -76,7 +76,6 @@ header {
     font-size: 30px;
     z-index: 10001;
     cursor: pointer;
-    display: none;
 }
 
 .hero {
@@ -97,6 +96,9 @@ header {
 
 aside {
     padding: 0 19%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px ;
 }
 
 .hero-text {
@@ -417,6 +419,7 @@ aside {
 }
 
 .form__input {
+    color: #eb6d8c;
     width: 100%;
     padding: 7px;
     margin: 6px 0;
@@ -472,48 +475,39 @@ aside {
     font-family: 'Poppins', sans-serif;
 }
 
-@media (max-height:669px) and (max-width: 377px) {
+@media  (max-width: 768px) {
+    
 
-   *{
-    box-sizing: content-box;
-   }
     body{
-        min-width: 100%;
-        min-height: 100%;
+        background-size: cover;
     }
-
-    .hero {
-        min-height: 100vh;
-        min-width: 100vw;
-        top: 9em;
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-
-    }
-
-    .hero .hero-img {
-        padding: 150px;
-        display: block;
-    }
-
-    .icons {
-        padding: 15px;
-        width: 100vw;
-        place-content: center;
-        position: absolute;
-        display: flex;
-        gap: 5px;
-
-    }
-
-    #tecnos{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        min-height: 100vh;
-        width: 100vw;
-    }
-
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 27% 5% 5% 5%;
 }
+
+.icons{
+    display: flex;
+    box-sizing: content-box;
+    justify-content: space-between;
+    left: -4%;
+}
+.logo img{
+    position: relative;
+    margin: 0 auto;
+}
+ header{
+    position: none;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    justify-content: center;
+ }
+
+ 
+
+    
+}
+
