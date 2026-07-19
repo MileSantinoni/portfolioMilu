@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
 
-
-
 * {
     padding: 0;
     margin: 0;
@@ -12,39 +10,37 @@
     text-decoration: none;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     overflow-x: hidden;
     background: linear-gradient(245.59deg, #e74d74 0%, #b83891 20.53%, #470938 75.52%);
+    /* background-attachment: fixed; */
     
 }
 
+::-webkit-scrollbar { width: .5em; }
+::-webkit-scrollbar-track { background-color: #ff46ac; }
+::-webkit-scrollbar-thumb { background-color: #ff8bb1; border-radius: 6px; }
 
-::-webkit-scrollbar {
-    width: .5em;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #ff46ac;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #ff8bb1;
-    border-radius: 6px;
-}
-
+/* ========================================= */
+/* HEADER Y NAVEGACIÓN */
+/* ========================================= */
 header {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1000;
-    width: 100vw;
+    width: 100%;
     height: 6em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5em 9%;
     background: transparent;
-    scroll-behavior: smooth;
     transition: top 1.5s;
 }
 
@@ -52,8 +48,6 @@ header {
     display: flex;
     justify-content: space-around;
     gap: 2em;
-
-
 }
 
 .nav ul a {
@@ -62,24 +56,22 @@ header {
     font-weight: 500;
 }
 
-/*Sección inicio*/
-.logo img {
-    width: 3.8em;
-}
-
-.navlist {
-    display: flex;
-}
+.logo img { width: 3.8em; }
+.navlist { display: flex; }
 
 #menu-icon {
+    display: none; /* Oculto en PC, se muestra en móvil */
     color: white;
     font-size: 30px;
     z-index: 10001;
     cursor: pointer;
 }
 
+/* ========================================= */
+/* SECCIÓN INICIO (HERO) */
+/* ========================================= */
 .hero {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin-top: -1em;
     position: relative;
@@ -98,38 +90,14 @@ aside {
     padding: 0 19%;
     display: flex;
     flex-wrap: wrap;
-    gap: 2px ;
+    gap: 2px;
 }
 
-.hero-text {
-    max-height: 60vh;
-}
-
-.hero-text h5 {
-    margin-bottom: .2em;
-    font-size: 3em;
-    line-height: 1;
-    color: white;
-
-}
-
-.hero-text h1 {
-    color: white;
-}
-
-.hero-text h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 1em;
-}
-
-.hero-text p {
-    color: white;
-    font-size: .9em;
-    line-height: 1.9;
-    margin-bottom: 40px;
-}
+.hero-text { max-height: 60vh; }
+.hero-text h5 { margin-bottom: .2em; font-size: 3em; line-height: 1; color: white; }
+.hero-text h1 { color: white; }
+.hero-text h4 { font-size: 18px; font-weight: 600; color: white; margin-bottom: 1em; }
+.hero-text p { color: white; font-size: .9em; line-height: 1.9; margin-bottom: 40px; }
 
 .hero-text a {
     display: inline-block;
@@ -146,12 +114,7 @@ aside {
     transition: all .55s ease;
 }
 
-.hero-text a:hover {
-    background: #e74d74;
-
-    border: 1px solid white;
-    transform: translate(8px);
-}
+.hero-text a:hover { background: #e74d74; }
 
 .icons {
     z-index: 1000;
@@ -190,30 +153,30 @@ aside {
     transition: all .50s ease;
 }
 
-.scroll-down i:hover {
-    transform: translateY(-5px);
-}
+.scroll-down i:hover { transform: translateY(-5px); }
 
-/* Sección de tecnologías*/
-
+/* ========================================= */
+/* SECCIÓN DE TECNOLOGÍAS */
+/* ========================================= */
 #tecnos {
-    display: grid;
-    place-items: center;
-    /* Esto centrará el contenido horizontal y verticalmente */
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100vh;
-
+    padding: 0; /* Esto anula el padding gigante del <aside> para que no se apriete */
 }
 
 .img-tecnos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Cuatro columnas, una para cada imagen y texto */
     gap: 6em;
-    /* Espacio entre elementos */
     text-align: center;
-    /* Centrar el texto horizontalmente */
+}
 
+.img-tecnos img {
+    width: 120px; /* Le damos un tamaño fijo a los logos para que se vean parejos */
+    transition: all 0.3s ease;
 }
 
 .img-tecnos img:hover {
@@ -221,88 +184,34 @@ aside {
     scale: 1.1;
 }
 
-.img-container {
-    width: auto;
-
-}
-
-.img-container img {
-
-    max-width: 10vw;
-    margin: 0 auto;
-    transition: all .55s ease;
-
+.img-container { 
+    width: auto; 
 }
 
 .img-tecnos h6 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.5em; /* Cambiado a 'em' para que el texto no se vea microscópico */
     color: #be8eb2;
+    margin-top: 10px;
 }
-
-
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: -30vh;
-}
-
-.barra {
-    width: 350px;
-    height: 20px;
-    background: rgba(225, 225, 225, 0.5);
-    border-radius: 10px;
-    box-shadow: 20px 25px 45px rgba(0, 0, 0, 0.4);
-}
-
-.habilidades h2 {
-    font-size: 15px;
-    color: rgba(225, 225, 225, 0.5);
-}
-
-.progreso {
-
-    width: var(--w);
-    height: 20px;
-    background: rgba(225, 225, 225, 0.5);
-    border-radius: 10px;
-    animation: Aumentar 10s ease;
-}
-
-@keyframes Aumentar {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: var(--w);
-    }
-}
-
-
-/* Sección de proyectos*/
-
+/* ========================================= */
+/* SECCIÓN DE PROYECTOS */
+/* ========================================= */
 .proyectos {
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(180deg, transparent, #470938 40.52%, #000000);
     flex-wrap: wrap;
     place-content: center;
-
+    gap: 4em; /* Separación de las tarjetas arreglada */
 }
 
 .card {
-    display: flex;
-    margin: 0 auto;
     font-size: 2vh;
     position: relative;
-    width: 45vh;
+    width: 45vh; /* Volvemos al tamaño original de escritorio */
     height: 50vh;
-
 }
 
 .card .face {
@@ -317,6 +226,7 @@ aside {
 
 .card .front {
     transform: perspective(600px) rotateY(0deg);
+    background: rgba(0, 0, 0, 0.2); 
 }
 
 .card .front img {
@@ -324,7 +234,8 @@ aside {
     display: flex;
     width: 70%;
     height: 60%;
-    object-fit: center;
+    object-fit: contain; 
+    margin-top: 10%; 
 }
 
 .card .front h3 {
@@ -341,7 +252,7 @@ aside {
 
 .card .back {
     transform: perspective(600px) rotateY(180deg);
-    background: linear-gradient(180deg, transparent, #470938 40.52%, #000000);
+    background: linear-gradient(180deg, #470938, #000000); 
     color: #f3f3f3;
     display: flex;
     flex-direction: column;
@@ -356,11 +267,10 @@ aside {
     font-size: 300%;
     padding-bottom: 10%;
     margin-top: 10%;
-
 }
 
 .card .back a {
-    color: #470938;
+    color: #ff8bb1; 
     margin: 0 auto;
     font-size: 2em;
     font-weight: bold;
@@ -372,20 +282,26 @@ aside {
 
 .card:hover .back {
     transform: perspective(600px) rotateY(360deg);
-    scale: 110%;
+    /* Borramos el scale para evitar el glitch o temblor al girar */
 }
 
-/* Parte del form de contacto*/
-/*estilos del formulario con flex*/
-
+/* ========================================= */
+/* FORMULARIO DE CONTACTO */
+/* ========================================= */
 .contacto {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: #000000;
+}
 
+.flex-container h3 {
+    font-size: 7em;
+    color: #b43857;
+    text-align: center;
+    font-family: 'Bahiana', cursive;
 }
 
 .flex-container {
@@ -399,15 +315,6 @@ aside {
     margin: 0 auto;
 }
 
-.flex-container h3 {
-
-    font-size: 7em;
-    color: #b43857;
-    text-align: center;
-    font-family: 'Bahiana', cursive;
-
-}
-
 .form {
     min-width: 400px;
     flex: 1;
@@ -415,7 +322,6 @@ aside {
     padding: 1em;
     margin-top: 8%;
     order: 5;
-
 }
 
 .form__input {
@@ -442,17 +348,16 @@ aside {
     background-color: #b43857;
     color: white;
     border: none;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 .form input[type="submit"]:hover {
     background-color: rgb(197, 107, 107);
     color: white;
-    border: none;
 }
 
-::placeholder {
-    color: rgb(214, 127, 127);
-}
+::placeholder { color: rgb(214, 127, 127); }
 
 #error {
     color: #e60000;
@@ -461,11 +366,12 @@ aside {
     place-content: center;
 }
 
-/*fin de estilos del formulario con flex*/
-
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
 .footer {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 3vh;
     background-color: #b43857;
     color: white;
@@ -475,39 +381,69 @@ aside {
     font-family: 'Poppins', sans-serif;
 }
 
-@media  (max-width: 768px) {
-    
-
-    body{
+/* ========================================= */
+/* DISEÑO RESPONSIVE (MÓVILES) */
+/* ========================================= */
+@media (max-width: 768px) {
+    body {
         background-size: cover;
+        overflow-x: hidden;
     }
-.hero{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 27% 5% 5% 5%;
-}
 
-.icons{
-    display: flex;
-    box-sizing: content-box;
-    justify-content: space-between;
-    left: -4%;
-}
-.logo img{
-    position: relative;
-    margin: 0 auto;
-}
- header{
-    position: none;
-    display: flex;
-    place-content: center;
-    align-items: center;
-    justify-content: center;
- }
+    header {
+        
+        background-color: #f56b8e4d;
+        height: 7%;
+        padding: 1.5em 5%;
+    }
 
- 
+    #menu-icon {
+        display: block; 
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #f56b8ef3; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2em;
+        padding-top: 1em;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        margin: auto;
+        /* height: 100%; */
+        /* padding-top: 9em; */
+        text-align: center;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .img-tecnos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
 
     
-}
+    .proyectos {
+        height: auto;
+        padding: 4em 0;
+    }
 
+    .card {
+        /* width: 80vw; */
+        /* height: 50vh; */
+        margin-bottom: 2em;
+    }
+}
