@@ -71,33 +71,32 @@ header {
 /* SECCIÓN INICIO (HERO) */
 /* ========================================= */
 .hero {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    margin-top: -1em;
-    position: relative;
+    margin-top: 1em;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     align-items: center;
     gap: 2rem;
 }
 
 .hero-img img {
-    max-width: 30vw;
+    max-width: 28vw;
     max-height: 100%;
 }
 
 aside {
-    padding: 0 19%;
+    padding: 0 20%;
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
+    gap: 2%;
 }
 
-.hero-text { max-height: 60vh; }
-.hero-text h5 { margin-bottom: .2em; font-size: 3em; line-height: 1; color: white; }
+/* .hero-text { max-height: 60vh; } */
+.hero-text h5 { /* margin-bottom: .2em; */ font-size: 3em; line-height: 1; color: white; }
 .hero-text h1 { color: white; }
 .hero-text h4 { font-size: 18px; font-weight: 600; color: white; margin-bottom: 1em; }
-.hero-text p { color: white; font-size: .9em; line-height: 1.9; margin-bottom: 40px; }
+.hero-text p { color: white; font-size: .9em; line-height: 1.9; margin-bottom: 1%; }
 
 .hero-text a {
     display: inline-block;
@@ -393,42 +392,105 @@ aside {
     header {
         
         background-color: #f56b8e4d;
-        height: 7%;
+        /* height: 7%; */
         padding: 1.5em 5%;
     }
+
+     .logo img {
+    width: 3.5em; 
+    margin-top: 5px;
+  }
 
     #menu-icon {
         display: block; 
     }
 
     .nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #f56b8ef3; 
         position: absolute;
-        top: 100%; 
+        top: 100%; /* Lo ubica justo debajo de la barra del header */
         left: 0;
         width: 100%;
-        text-align: center;
-        padding-bottom: 2em;
-        padding-top: 1em;
+        background-color: #f56b8eec; /* Color de fondo del menú desplegado */
+        flex-direction: column; /* Pone los links uno debajo del otro */
+        align-items: center;
+        padding: 0;
+        max-height: 0; /* Oculta el menú por defecto */
+        overflow: hidden;
+        transition: max-height 0.4s ease;
     }
 
     .nav ul.active {
-        display: flex;
+        padding: 1.5em 0;
+        max-height: 300px; 
+    }
+    .nav ul li {
+    margin: 15px 0; 
     }
 
+    .hero, .hero-text {
+    display: contents; 
+    }
+
+    .hero-text h5 { order: 1; }
+    .hero-text h4 { order: 2; text-align: center; margin-bottom: 0; }
+
+    .icons {
+    order: 3; 
+    position: static;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+    width: 100%;
+    padding: 1.5em 0;
+  }
+  .icons i { margin: 0; font-size: 2.5em; }
+
+  .hero-text h1 { order: 4; text-align: center; margin-top: 10px; }
+  .hero-text p { order: 5; text-align: center; margin-bottom: 1em; }
+  
+  /* Botones de Tecnos y Proyectos */
+  .hero-text a { order: 6; margin: 0.5em; } 
+
+  /* Ocultamos los saltos de línea (<br/>) sueltos para que no generen huecos raros */
+  .hero-text > br, .hero > br { display: none; }
+
     .hero {
-        grid-template-columns: 1fr;
-        margin: auto;
-        /* height: 100%; */
-        /* padding-top: 9em; */
-        text-align: center;
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto; 
+        padding-top: 6em;
     }
 
     .hero-img {
         display: none;
     }
+
+    /* ========================================= */
+  /*  REDES SOCIALES HORIZONTALES              */
+  /* ========================================= */
+
+
+    div:has(> .icons) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6em; /* Evita que el header tape el texto */
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+    /* .icons i { margin: 0; font-size: 2.5em; } */
+
+   /*  .hero-text h1 { order: 4; text-align: center; margin-top: 10px; }
+    .hero-text p { order: 5; text-align: center; margin-bottom: 1em; }
+    .hero-text a { order: 6; margin: 0.5em; }  */
+    
+  /* Ocultamos saltos de línea sueltos para que flexbox no los tome como cajas vacías */
+    .hero-text > br { display: none; }
 
     .img-tecnos {
         grid-template-columns: repeat(2, 1fr);
@@ -446,4 +508,40 @@ aside {
         /* height: 50vh; */
         margin-bottom: 2em;
     }
-}
+
+    /* --- CONTACTO --- */
+    .contacto {
+        height: auto; /* Evita que el fondo negro se corte */
+        padding: 10% 0; /* Le da aire arriba y abajo */
+    }
+
+    .flex-container {
+        width: 90%; /* Usa casi todo el ancho de la pantalla */
+        height: auto;
+        position: relative; /* Cambiamos el absolute para que no se superponga */
+        margin: 0 auto;
+    }
+
+    .flex-container h3 {
+        font-size: 4.5em; /* Achicamos el título para que entre en la pantalla */
+        margin-bottom: 0;
+    }
+
+    .form {
+        min-width: 100%; /* Anulamos los 400px para que no genere scroll horizontal */
+        margin-top: 5%;
+        padding: 0;
+    }
+
+    .form__input, .form textarea {
+        width: 100%; /* Asegura que los campos no se salgan del borde */
+    }
+
+    /* --- FOOTER --- */
+    .footer {
+        height: auto; /* Anulamos los 3vh fijos para que el texto se acomode */
+        padding: 1.5em; /* Un área más cómoda por si se lee en celular */
+        text-align: center;
+        font-size: 0.85em; /* Letra un poco más chica */
+    }
+    }

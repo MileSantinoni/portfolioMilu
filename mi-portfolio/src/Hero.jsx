@@ -22,10 +22,7 @@ function Hero() {
           <h4>Soy Milena Santinoni<br/> ¡Te doy la bienvenida a mi portfolio!</h4><br/><br/>
           <h1>Un poco sobre mí</h1>
           <p>
-            Me entusiasma aprender sobre tecnología, diseño y tendecias de desarrollo. <br/> 
-            Actualmente estudio Ingeniería en Sistemas en la Universidad Tecnológica Nacional <br/> 
-            y recientemente me he capacitado en desarrollo web full stack y diseño gráfico <br/> 
-            (debo admitir que me encanta el desarrollo front-end) <br/>
+            Soy estudiante de Ingeniería en Sistemas de Información y me apasiona crear soluciones digitales que combinen tecnología, creatividad y funcionalidad. Me especializo en desarrollo web y disfruto aprender nuevas herramientas, automatizar procesos y transformar ideas en proyectos reales. Tengo experiencia en soporte técnico y una base sólida en HTML, CSS, JavaScript, Git y MySQL. Me considero una persona curiosa, autodidacta y siempre con ganas de seguir creciendo. <br/>
           </p>
           <a href="#tecnos">Tecnos</a>
           <a href="#proyectos">Proyectos</a>
@@ -35,10 +32,6 @@ function Hero() {
         </div>
       </aside>
 
-      
-      {/* <div className="scroll-down">
-        <a href="#tecnos"><i className="tu-clase-flecha-abajo">Bajar</i></a>
-      </div>  */}
 
     </div>
   );
