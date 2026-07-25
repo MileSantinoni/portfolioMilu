@@ -28,7 +28,7 @@ function Hero() {
           <a href="#proyectos">Proyectos</a>
         </div>
         <div className="hero-img">
-          <img src="./img/Yuumi Splash.png" alt="Yuumi" />
+          <img src="./img/avatar_v1.svg" alt="avatar" />
         </div>
       </aside>
 
