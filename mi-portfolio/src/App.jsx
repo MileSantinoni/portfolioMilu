@@ -54,7 +54,7 @@ export default function App() {
     <div className="portfolio">
       <header style={{ top: showHeader ? '0' : '-100px', transition: 'top 1.5s' }}>
         <a href="#hero" className="logo">
-            <img src="./img/Yuumi.icono.png" alt="Logo" /> 
+            <img src="./img/icono_corazon.png" alt="Logo" /> 
         </a>
 
         <div className="nav">

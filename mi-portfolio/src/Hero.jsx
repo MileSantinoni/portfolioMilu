@@ -18,9 +18,10 @@ function Hero() {
 
       <aside className="hero" id="hero">
         <div className="hero-text">
-          <h5>¡Holaa!</h5>
-          <h4>Soy Milena Santinoni<br/> ¡Te doy la bienvenida a mi portfolio!</h4><br/><br/>
-          <h1>Un poco sobre mí</h1>
+          <h1>Hola! Yo soy</h1>
+          <h5>Milena Santinoni</h5><br/><br/>
+          {/* <h4>[Portfolio web]</h4><br/> */}
+          <h1>Sobre mí</h1>
           <p>
             Soy estudiante de Ingeniería en Sistemas de Información y me apasiona crear soluciones digitales que combinen tecnología, creatividad y funcionalidad. Me especializo en desarrollo web y disfruto aprender nuevas herramientas, automatizar procesos y transformar ideas en proyectos reales. Tengo experiencia en soporte técnico y una base sólida en HTML, CSS, JavaScript, Git y MySQL. Me considero una persona curiosa, autodidacta y siempre con ganas de seguir creciendo. <br/>
           </p>
